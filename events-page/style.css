@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: "Inter";
-  padding-top: 181px;
+  padding-top: 201px;
 }
 
 /* Personalized clases */
@@ -16,12 +16,24 @@ body {
   margin-bottom: 12px;
 }
 
+.header-fixed {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .event-card--text__title {
   margin: 6px 0;
 }
 
 .event-card--text__p {
   margin: 2px 0;
+}
+
+.filter-button {
+  padding: 5px;
 }
 
 /* Width */
@@ -44,14 +56,6 @@ body {
 
 .space--around {
   justify-content: space-around;
-}
-
-.header-fixed {
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  top: 0;
-  left: 0;
 }
 
 /* Grid Display */
@@ -91,7 +95,23 @@ body {
   flex: 0 0 20%;
 }
 
+.scroll-grid {
+  display: grid;
+  grid-auto-columns: 25%;
+  grid-auto-flow: column;
+  grid-gap: 12px;
+  overflow-x: auto;
+}
+
+.scroll-grid::-webkit-scrollbar {
+  display: none;
+}
+
 /* Padding */
+.padding__6 {
+  padding: 6px;
+}
+
 .padding--lateral__24 {
   padding: 0 24px;
 }
@@ -111,17 +131,29 @@ body {
   .grid-cell {
     flex: 0 0 calc(50% - 6px);
   }
+
+  .scroll-grid {
+    grid-auto-columns: 20%;
+  }
 }
 
 @media (min-width: 900px) {
   .grid-cell {
     flex: 0 0 calc(33.333% - 8px);
   }
+
+  .scroll-grid {
+    grid-auto-columns: 15%;
+  }
 }
 
 @media (min-width: 1200px) {
   .grid-cell {
     flex: 0 0 calc(25% - 10px);
+  }
+
+  .scroll-grid {
+    grid-auto-columns: 12.5%;
   }
 }
 
