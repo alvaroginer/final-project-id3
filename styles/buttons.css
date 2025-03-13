@@ -7,7 +7,6 @@ div {
   display: flex;
   gap: 20px;
 }
-
 /* ========================= */
 
 /* Main button */
@@ -36,6 +35,11 @@ div {
   &:active {
     background-color: #085fca;
   }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
 }
 
 /* Secondary button */
@@ -53,6 +57,11 @@ div {
 
   &:active {
     color: #085fca;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
   }
 }
 
