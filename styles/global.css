@@ -1,0 +1,50 @@
+:root {
+  /* ----> Colors */
+  --color-blue: #1f83ff;
+  --color-blue-light: #4d9cff;
+  --color-blue-dark: #085fca;
+
+  /* ----> Space */
+  --space-2: 2px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-18: 18px;
+  --space-52: 52px;
+
+  /* ----> Layouts */
+  --border-radius: var(--space-10);
+  --border-width: var(--space-2);
+
+  /* ----> Fonts & Typography*/
+  --font-weight-normal: 400;
+
+  --font-size-18: var(--space-18);
+
+  --font-family-body: "Poppins", "sans-serif";
+
+  /* ----> */
+  --button-color-main: var(--color-blue);
+  --button-color-light: var(--color-blue-light);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  gap: 20px;
+}
+
+/* Display */
+.display__flex {
+  display: flex;
+}
+
+.align-items__center {
+  align-items: center;
+}
+
+.gap__8px {
+  gap: 8px;
+}
