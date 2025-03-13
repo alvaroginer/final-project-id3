@@ -40,23 +40,43 @@ div {
 
 /* Secondary button */
 .btn--secondary {
+  background-color: transparent;
   color: #1f83ff;
   border: 2px #1f83ff solid;
 }
 
 .btn--secondary:hover {
+  background-color: transparent;
   color: #4d9cff;
   border: 2px #4d9cff solid;
 }
 
 .btn--secondary:active {
+  background-color: transparent;
   color: #085fca;
   border: 2px #085fca solid;
 }
 
 .btn--secondary:disabled {
+  background-color: transparent;
   color: #e6e6e6;
   border: 2px #e6e6e6 solid;
+}
+
+.btn--no-border {
+  border: none;
+}
+
+.btn--no-border:hover {
+  border: none;
+}
+
+.btn--no-border:active {
+  border: none;
+}
+
+.btn--no-border:disabled {
+  border: none;
 }
 
 /* Display */
