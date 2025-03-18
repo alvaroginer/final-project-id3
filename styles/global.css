@@ -1,25 +1,50 @@
 :root {
   /* ----> Colors */
+
+  /* Blue */
   --color-blue: #1f83ff;
   --color-blue-light: #4d9cff;
   --color-blue-dark: #085fca;
+  --color-blue-strong-dark: #081425;
+
+  /* Lila */
+  --color-lila: #5e2fd3;
+
+  /* White */
+  --color-white: white;
 
   /* ----> Space */
+  --space-0: 0;
   --space-2: 2px;
+  --space-5: 5px;
+  --space-8: 8px;
   --space-10: 10px;
   --space-12: 12px;
   --space-18: 18px;
+  --space-20: 20px;
+  --space-30: 30px;
+  --space-42: 42px;
   --space-52: 52px;
+  --space-55: 55px;
+
+  /* ----> Percentage */
+  --percentage-2: 0.2;
 
   /* ----> Layouts */
   --border-radius: var(--space-10);
   --border-width: var(--space-2);
 
   /* ----> Fonts & Typography*/
+
+  /* Weight */
   --font-weight-normal: 400;
+  --font-weight-medium: 500;
 
+  /* Size */
   --font-size-18: var(--space-18);
+  --font-size-30: var(--space-30);
 
+  /* Family */
   --font-family-body: "Poppins", "sans-serif";
 
   /* ----> */
@@ -31,9 +56,40 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--color-blue-strong-dark);
+}
+
 div {
   display: flex;
-  gap: 20px;
+}
+
+/* Custom Clases */
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: var(--space-52);
+  border-radius: var(--space-20);
+  background-color: var(--color-white);
+}
+
+.notification-container--title {
+  font-size: var(--font-size-30);
+  font-weight: var(--font-weight-medium);
+  margin: var(--space-0);
+  margin-bottom: var(--space-30);
+}
+
+.notification-container--text {
+  color: var(--color-lila);
+  font-size: var(--font-size-18);
+  margin: var(--space-0);
+  text-align: center;
+  margin-bottom: var(--space-42);
 }
 
 /* Display */
@@ -45,6 +101,52 @@ div {
   align-items: center;
 }
 
+.justify-content__center {
+  justify-content: center;
+}
+
+.flex-direction__column {
+  flex-direction: column;
+}
+
 .gap__8px {
-  gap: 8px;
+  gap: var(--space-8);
+}
+
+/* Position */
+.position--relative {
+  position: relative;
+}
+
+.position--absolute {
+  position: absolute;
+}
+
+/* Height */
+.height--100vh {
+  height: calc(100vh - var(--space-55));
+}
+
+/* Text-align */
+.text-align {
+  text-align: center;
+}
+
+/* Margin */
+.margin--left__5 {
+  margin-left: var(--space-5);
+}
+
+.margin--right__5 {
+  margin-right: var(--space-5);
+}
+
+/* Padding */
+.padding--52 {
+  padding: var(--space-52);
+}
+
+/* Border-radius */
+.border-radius--20 {
+  border-radius: var(--space-20);
 }

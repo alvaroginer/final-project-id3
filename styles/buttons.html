@@ -14,10 +14,39 @@
     <title>Buttons</title>
   </head>
   <body>
-    <div>
-      <button class="btn">Button</button>
-      <button class="btn btn--secondary">Button</button>
-      <button class="btn btn--secondary btn--no-border">Button</button>
+    <div
+      class="container display__flex align-items__center position--relative height--100vh justify-content__center"
+    >
+      <button class="btn">Click here</button>
+      </div>
     </div>
   </body>
+  <script>
+    document.querySelector(".btn").addEventListener("click", function () {
+  const notificationContainer = document.createElement("div");
+  notificationContainer.className = "notification-container";
+  notificationContainer.innerHTML = `<p class="notification-container--title">
+          Are you sure you want to complete this course?
+        </p>
+        <p class="notification-container--text">
+          Make sure you have tagged all attenders.
+          <br />
+          Once you complete the course you will not be able to make changes.
+        </p>
+        <div>
+          <button class="btn btn--secondary margin--right__5 button--close">No</button>
+          <button class="btn margin--left__5 button--close">Yes</button>
+        </div>`;
+
+  document.querySelector(".container").appendChild(notificationContainer);
+
+  // Agregar eventos a los botones después de que se han agregado al DOM
+  document.querySelectorAll('.button--close').forEach(button => {
+    button.addEventListener('click', function () {
+      const renderedNotificationContainer = document.querySelector('.notification-container')
+      renderedNotificationContainer.remove()
+    });
+  });
+});
+  </script>
 </html>

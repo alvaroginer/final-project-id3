@@ -2,16 +2,15 @@
 .btn {
   outline: none;
   padding: 12px 52px;
-  border-radius: 10px;
-  font-size: 18px;
-  border-width: 2px;
+  border-radius: var(--space-10);
+  font-size: var(--space-18);
+  border-width: var(--space-2);
   border-style: solid;
   border-color: transparent;
   background-color: var(--color-blue);
-  color: #ffffff;
-  font-family: "Poppins", "sans-serif";
-  font-weight: 400;
-  font-style: normal;
+  color: var(--color-white);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
   line-height: 1.5;
   text-decoration: none;
   cursor: pointer;
@@ -26,7 +25,7 @@
   }
 
   &:disabled {
-    opacity: 0.2;
+    opacity: var(--percentage-2);
     cursor: not-allowed;
   }
 }
@@ -34,14 +33,14 @@
 /* Secondary button */
 .btn--secondary {
   background-color: transparent;
-  color: #1f83ff;
-  border-width: 2px;
+  color: var(--color-blue);
+  border-width: var(--space-2);
   border-color: currentColor;
   border-style: solid;
 
   &:hover {
     color: var(--color-blue-light);
-    background-color: white;
+    background-color: var(--color-white);
   }
 
   &:active {
@@ -49,14 +48,14 @@
   }
 
   &:disabled {
-    opacity: 0.2;
+    opacity: var(--percentage-2);
     cursor: not-allowed;
   }
 }
 
 .btn--disabled,
 [disabled] {
-  opacity: 0.2;
+  opacity: var(--percentage-2);
   cursor: not-allowed;
 }
 
