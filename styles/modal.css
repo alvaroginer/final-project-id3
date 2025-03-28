@@ -1,0 +1,25 @@
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: var(--space-52);
+  border-radius: var(--space-20);
+  background-color: var(--color-white);
+}
+
+.notification-container--title {
+  font-size: var(--font-size-30);
+  font-weight: var(--font-weight-medium);
+  margin: var(--space-0);
+  margin-bottom: var(--space-30);
+}
+
+.notification-container--text {
+  color: var(--color-lila);
+  font-size: var(--font-size-18);
+  margin: var(--space-0);
+  text-align: center;
+  margin-bottom: var(--space-42);
+}
